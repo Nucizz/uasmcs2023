@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/trans"
+    tools:context=".Page.PostFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="30dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="25dp"
+            tools:listitem="@layout/item_post"/>
+
+        <TextView
+            android:id="@+id/errorText"
+            android:paddingHorizontal="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Loading..."
+            android:fontFamily="@font/poppins"
+            android:includeFontPadding="false"
+            android:textSize="16sp"
+            android:textFontWeight="400"
+            android:textColor="@color/grey"/>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
